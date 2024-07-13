@@ -227,7 +227,7 @@ public class App {
     private static void tampilLeaderboard(Connection connection) {
         System.out.println("Leaderboard (Top 5):");
         try {
-            String query = "SELECT * FROM user ORDER BY skor DESC limit 5";
+            String query = "SELECT nama, skor, waktu FROM user ORDER BY skor DESC limit 5";
             PreparedStatement stmt = connection.prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
 
